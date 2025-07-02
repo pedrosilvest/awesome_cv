@@ -1,37 +1,42 @@
-# Pedro Silvestre | Interactive CV
+# Pedro Silvestre // Data & Systems Interface
 
 <p align="center">
-  A modern, interactive portfolio showcasing my journey as a Data Scientist and Bioinformatician.
+  <a href="https://www.linkedin.com/in/your-linkedin-profile/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge">
+  </a>
+  <a href="https://github.com/pedrosilvest" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Badge">
+  </a>
 </p>
 
 <p align="center">
-  This repository contains the source code. The full experience is live on GitHub Pages.
+  A live data stream of my skills, experience, and creative pursuits.
+  <br>
+  This repository contains the system core. The full experience is a live interface.
 </p>
 
 ---
 
-<br>
-
 <p align="center">
+  <!-- 🚨 IMPORTANT: Replace this placeholder with a link to your own screen-capture GIF! -->
   <a href="https://pedrosilvest.github.io/awesome_cv/cv.html" target="_blank">
-    <img src="https://i.imgur.com/g8e1O0N.gif" alt="Animated Demo of the Interactive CV">
+    <img src="assets/demo.gif" alt="Animated Demo of the Interactive CV">
   </a>
 </p>
 
-<br>
-
 <div align="center">
-
-  <a href="https://pedrosilvest.github.io/awesome_cv/cv.html" target="_blank" style="text-decoration: none;">
-    <img src="https://img.shields.io/badge/Launch%20Interactive%20CV-%E2%96%B6-0a192f?style=for-the-badge&labelColor=0a192f&color=64ffda&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bTAgMThjLTQuNDEgMC04LTMuNTktOC04czMuNTktOCA4LTggOCAzLjU5IDggOC0zLjU5IDgtOCA4eiIvPjwvcGF0aA+PC9zdmc+Cg==" alt="Launch CV Button">
+  <h3>SYSTEM ONLINE. AWAITING INPUT.</h3>
+  <br>
+  <a href="https://pedrosilvest.github.io/awesome_cv/cv.html" target="_blank">
+    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjgwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxkZWZzPgogICAgPGZpbHRlciBpZD0iZ2xvdyIgeD0iLTUwJSIgeT0iLTUwJSIgd2lkdGg9IjIwMCUiIGhlaWdodD0iMjAwJSI+CiAgICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjUiIHJlc3VsdD0iYmx1ciIgLz4KICAgICAgPGZlTWVyZ2U+CiAgICAgICAgPGZlTWVyZ2VOb2RlIGluPSJibHVyIiAvPgogICAgICAgIDxmZU1lcmdlTm9kZSBpbj0iU291cmNlR3JhcGhpYyIgLz4KICAgICAgPC9mZU1lcmdlPgogICAgPC9maWx0ZXI+CiAgICA8c3R5bGU+CiAgICAgIEBpbXBvcnQgdXJsKCdodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczI/ZmFtaWx5PUZpcmErQ29kZTp3Z2h0QDQwMCw3MDAmZGlzcGxheT1zdyYmYW1wO3ByZXZpZXcudGV4dD1MQVVOQ0glMjBJTlRFUkZBQ0UnKTsKICAgICAgLnRpdGxlIHsgZm9udC1mYW1pbHk6ICdGaXJhIENvZGUnLCBtb25vc3BhY2U7IGZvbnQtd2VpZ2h0OiA3MDA7IGZvbnQtc2l6ZTogMjRweDsgfQogICAgICAjZ2xpdGNoMSB7IGFuaW1셔VG9uOiBnbGl0Y2gxIDJzIGxpbmVhciBpbmZpbml0ZTsgfQogICAgICAjZ2xpdGNoMiB7IGFuaW1hdGlvbjogZ2xpdGNoMiAycyBsaW5lYXIgaW5maW5pdGU7IH0KICAgICAgQGtleWZyYW1lcyBnbGl0Y2gxIHsKICAgICAgICAwJSwgMjUlLCAxMDAlIHsgb3BhY2l0eTogMDsgfQogICAgICAgIDI2JSwgMjkuOTk5JSB7IG9wYWNpdHk6IDE7IH0KICAgICAgICAzMCUsIDM0Ljk5OSUgeyBvcGFjaXR5OiAwOyB9CiAgICAgICAgMzUlLCAzOS45OTklIHsgb3BhY2l0eTogMTsgfQogICAgICAgIDQwJSwgNDQuOTk5JSB7IG9wYWNpdHk6IDA7IH0KICAgICAgICA0NSUsIDQ5Ljk5OSUgeyBvcGFjaXR5OiAxOyB9CiAgICAgICAgNTAlLCA1NC45OTklIHsgb3BhY2l0eTogMDsgfQogICAgICAgIDU1JSwgNTkuOTk5JSB7IG9wYWNpdHk6IDE7IH0KICAgICAgICA2MCUsIDY0Ljk5OSUgeyBvcGFjaXR5OiAwOyB9CiAgICAgICAgNjUlLCA2OS45OTklIHsgb3BhY2l0eTogMTsgfQogICAgICAgIDcwJSwgNzQuOTk5JSB7IG9wYWNpdHk6IDA7IH0KICAgICAgICA3NSUsIDc5Ljk5OSUgeyBvcGFjaXR5OiAxOyB9CiAgICAgICAgODAlLCA4NC45OTklIHsgb3BhY2l0eTogMDsgfQogICAgICAgIDg1JSwgODkuOTk5JSB7IG9wYWNpdHk6IDE7IH0KICAgICAgICA5MCUsIDk0Ljk5OSUgeyBvcGFjaXR5OiAwOyB9CiAgICAgICAgOTUlLCA5OS45OTklIHsgb3BhY2l0eTogMTsgfQogICAgICB9CiAgICAgIEBrZXlmcmFtZXMgZ2xpdGNoMiB7CiAgICAgICAgMCUsIDUwJSwgMTAwJSB7IG9wYWNpdHk6IDA7IH0KICAgICAgICA1MSwgNTQuOTk5JSB7IG9wYWNpdHk6IDE7IH0KICAgICAgICA1NSUsIDU5Ljk5OSUgeyBvcGFjaXR5OiAwOyB9CiAgICAgICAgNjAlLCA2NC45OTklIHsgb3BhY2l0eTogMTsgfQogICAgICAgIDY1JSwgNjkLjk5OSUgeyBvcGFjaXR5OiAwOyB9CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxwYXRoIGQ9Ik0wIDIwIEwwIDAgTDMwMCAwIEwzMjAgNDAgTDMwMCA4MCBMIDgwIDgwIEw2MCA2MCBMMCA2MCIgZmlsbD0iIzBhMTkyZiIgc3Ryb2tlPSIjNjRmZmRhIiBzdHJva2Utd2lkdGg9IjIiIGZpbHRlcj0idXJsKCNnbG9wKSIvPgogIDxnIGNsYXNzPSJ0aXRsZSI+CiAgICA8dGV4dCBpZD0iZ2xpdGNoMSIgeD0iNTAiIHk9IjQ4IiBmaWxsPSIjRkYwMDVGIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNSwgLTEpIj5MQVVOQ0ggSU5URVJGQUNFPC90ZXh0PgogICAgPHRleHQgaWQ9ImdsaXRjaDIiIHg9IjE1MyIgeT0iNDgiIGZpbGw9IiMwMEZGRkYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUsIDEpIj5MQVVOQ0ggSU5URVJGQUNFPC90ZXh0PgogICAgPHRleHQgeD0iMTUzIiB5PSI0OCIgZmlsbD0iIzY0ZmZkYSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+TEFVTkNIIElOVEVSRkFDRTwvdGV4dD4KICA8L2c+Cjwvc3ZnPg==" alt="Launch Interactive CV">
   </a>
-  
 </div>
 
 <br>
 
-### Tech Stack
-- **HTML5** & **CSS3** (Custom Properties, Flexbox, Grid)
-- **JavaScript (ES6+)** for animations and interactivity
-- **Particles.js** for the dynamic background
-- Hosted on **GitHub Pages**
+### // Core Technologies
+
+-   ![bullet](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNiAwTDEyIDZMNiAxMkwwIDZaIiBmaWxsPSIjNjRmZmRhIi8+PC9zdmc+) **HTML5 & CSS3** (Custom Properties, Flexbox, Grid)
+-   ![bullet](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNiAwTDEyIDZMNiAxMkwwIDZaIiBmaWxsPSIjNjRmZmRhIi8+PC9zdmc+) **JavaScript (ES6+)** for animations and interactivity
+-   ![bullet](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNiAwTDEyIDZMNiAxMkwwIDZaIiBmaWxsPSIjNjRmZmRhIi8+PC9zdmc+) **Particles.js** for the dynamic background
+-   ![bullet](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNiAwTDEyIDZMNiAxMkwwIDZaIiBmaWxsPSIjNjRmZmRhIi8+PC9zdmc+) **Hosted on GitHub Pages**
