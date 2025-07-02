@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Silvestre | Data Scientist & Bioinformatician</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --dark-navy: #0a192f;
+            --light-navy: #112240;
+            --lightest-navy: #233554;
+            --slate: #8892b0;
+            --light-slate: #a8b2d1;
+            --lightest-slate: #ccd6f6;
+            --accent-color: #64ffda;
+            --white: #e6f1ff;
+            --font-sans: 'Roboto', sans-serif;
+            --font-heading: 'Poppins', sans-serif;
+        }
+
+        /* --- Global Styles & Resets --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--dark-navy);
+            color: var(--slate);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* --- Interactive Particle Background --- */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        /* --- Fixed Sidebar Navigation --- */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 40px;
+            z-index: 10;
+        }
+        .sidebar-nav { list-style: none; }
+        .sidebar-nav li { margin-bottom: 20px; }
+        .sidebar-nav a {
+            font-family: var(--font-heading);
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--slate);
+            text-decoration: none;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .sidebar-nav a::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 2px;
+            background-color: var(--slate);
+            transition: all 0.3s ease;
+        }
+        .sidebar-nav a:hover,
+        .sidebar-nav a.active {
+            color: var(--accent-color);
+        }
+        .sidebar-nav a:hover::before,
+        .sidebar-nav a.active::before {
+            width: 30px;
+            background-color: var(--accent-color);
+        }
+
+        /* --- Main Content Wrapper & Glassmorphism --- */
+        .content-wrapper {
+            margin-left: 200px;
+            padding: 5vh 5vw;
+        }
+        .glass-panel {
+            background: rgba(17, 34, 64, 0.75);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 12px;
+            border: 1px solid rgba(204, 214, 246, 0.1);
+            padding: 50px;
+        }
+
+        /* --- Header Section --- */
+        #profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+            gap: 30px;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+        h1 {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            color: var(--lightest-slate);
+            margin-bottom: 10px;
+        }
+        .profile-summary { color: var(--light-slate); font-size: 1.1rem; }
+        .contact-info { list-style: none; display: flex; flex-wrap: wrap; margin-top: 20px; gap: 20px; font-size: 0.9rem; }
+        .contact-info a { display: flex; align-items: center; color: var(--slate); }
+        .contact-info a:hover { color: var(--accent-color); }
+        .contact-info i { margin-right: 8px; font-size: 1rem; color: var(--accent-color);}
+
+        /* --- General Section Styling --- */
+        .content-section { margin-bottom: 50px; }
+        h2 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--lightest-slate);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        h2 i { color: var(--accent-color); }
+        h3 { font-family: var(--font-heading); font-size: 1.25rem; color: var(--accent-color); margin-bottom: 5px; }
+        .sub-header { color: var(--light-slate); font-weight: 500; margin-bottom: 15px; }
+        
+        /* --- Timeline Styling --- */
+        .timeline { position: relative; padding-left: 40px; }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            background-color: var(--lightest-navy);
+        }
+        .timeline-item { position: relative; margin-bottom: 30px; }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -50px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            background-color: var(--dark-navy);
+            border: 3px solid var(--accent-color);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-item ul { list-style: none; }
+        .timeline-item li { position: relative; padding-left: 20px; margin-bottom: 8px; color: var(--slate); }
+        .timeline-item li::before { content: '▹'; position: absolute; left: 0; color: var(--accent-color); }
+        .timeline-item .publication a, #contacts a { color: var(--accent-color); text-decoration: none; transition: color 0.3s ease; }
+        .timeline-item .publication a:hover, #contacts a:hover { color: var(--white); }
+
+
+        /* --- Right Column & Skills --- */
+        .grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-tag {
+            background-color: var(--lightest-navy);
+            color: var(--light-slate);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        .skill-tag:hover {
+            background-color: var(--accent-color);
+            color: var(--dark-navy);
+            transform: translateY(-2px);
+        }
+        
+        /* --- Section: Beyond the Code --- */
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        .hobby-card {
+            background: linear-gradient(135deg, rgba(17, 34, 64, 0.5), rgba(35, 53, 84, 0.5));
+            border: 1px solid var(--lightest-navy);
+            border-radius: 8px;
+            padding: 30px;
+            transition: all 0.3s ease-in-out;
+            text-align: center;
+        }
+        .hobby-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px -10px rgba(100, 255, 218, 0.2);
+            border-color: var(--accent-color);
+        }
+        .hobby-card i {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+        .hobby-card h4 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--lightest-slate);
+            margin-bottom: 15px;
+        }
+        .hobby-card p {
+            font-size: 1rem;
+            color: var(--slate);
+            line-height: 1.5;
+        }
+        
+        /* --- Scroll Animations --- */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 1200px) {
+            .sidebar { display: none; }
+            .content-wrapper { margin-left: 0; }
+        }
+        @media (max-width: 768px) {
+            #profile { flex-direction: column; text-align: center; }
+            .glass-panel { padding: 30px; }
+            h1 { font-size: 2.5rem; }
+            .contact-info { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <nav class="sidebar">
+        <ul class="sidebar-nav">
+            <li><a href="#profile" class="active">Profile</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills-awards">Skills & Awards</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+            <li><a href="#beyond-code">Beyond Code</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-wrapper">
+        <div class="glass-panel">
+            <section id="profile" class="scroll-reveal">
+                <img src="https://i.imgur.com/TWiYyqS.jpeg" alt="Profile Picture of Pedro Silvestre" class="profile-pic">
+                <div class="profile-text">
+                    <h1>Pedro Silvestre</h1>
+                    <p class="profile-summary">Versatile data scientist with a background in bioinformatics, computational biology, and genetics, now focused on applying data science to broader real-world challenges. Experienced in analyzing complex datasets using Python, R, and machine learning methods, with a proven ability to adapt across domains from molecular medicine to marine science. Naturally curious and multidisciplinary, with a passion for storytelling through data, and a creative mindset shaped by both scientific research and adventurous pursuits like scuba diving and sailing.</p>
+                    <ul class="contact-info">
+                        <li><a href="mailto:ps3.pms@gmail.com"><i class="fas fa-envelope"></i> ps3.pms@gmail.com</a></li>
+                        <li><a href="https://github.com/pedrosilvest" target="_blank"><i class="fab fa-github"></i> github.com/pedrosilvest</a></li>
+                        <li><a><i class="fas fa-map-marker-alt"></i> Lisbon, Portugal</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="experience" class="content-section scroll-reveal">
+                <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Bioinformatician</h3>
+                        <p class="sub-header">Gulbenkian Institute for Molecular Medicine, Fonseca Lab | Oeiras | Apr 2023 - Present</p>
+                        <ul>
+                            <li>Analysis of Whole Genome Sequencing (WGS), RNAseq, and PacBio Long-Reads data.</li>
+                            <li>Developed and automated end-to-end bioinformatics pipelines for WGS & RNA-seq data, from QC and alignment to variant and splicing analysis.</li>
+                            <li>Created new reference genomes for analysis.</li>
+                            <li>Performed data analysis and visualization with Python, R, and shell scripting.</li>
+                            <li>Built and deployed reproducible bioinformatics workflows using Docker containers.</li>
+                            <li>Utilized SLURM for high-performance computing on cluster environments.</li>
+                            <li>Conducted clinical bioinformatics analysis for GenoMed.</li>
+                            <li>Managed and contributed to multiple research projects simultaneously.</li>
+                        </ul>
+                    </div>
+                     <div class="timeline-item">
+                        <h3>Research Assistant (Marine Biology)</h3>
+                        <p class="sub-header">The Leatherback Trust | Costa Rica | Oct 2020 - Nov 2020</p>
+                        <ul>
+                            <li>Collected nesting data, tagged sea turtles, and managed nest relocations.</li>
+                            <li>Led conservation volunteers and monitored the success of hatchlings.</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Intern, Laboratory Assistant</h3>
+                        <p class="sub-header">Instituto Nacional de Investigação Agrária e Veterinária | Oeiras | Jul 2019</p>
+                        <ul>
+                            <li>Extracted host DNA from stool and blood samples.</li>
+                            <li>Conducted PCR, electrophoresis, and DNA sequencing.</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Intern, Marine Biology</h3>
+                        <p class="sub-header">Marine Biology Station of Funchal | Jul-Aug 2018</p>
+                        <ul>
+                            <li>Monitored jellyfish and coastal fauna populations.</li>
+                            <li>Processed shark samples and supported the EU GoJelly project.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="education" class="content-section scroll-reveal">
+                <h2><i class="fas fa-user-graduate"></i> Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>MSc in Computational Biology and Bioinformatics</h3>
+                        <p class="sub-header">Faculty of Sciences, University of Lisbon, Portugal | 2021 - 2024 | Final Grade: 18.47</p>
+                        <ul>
+                           <li>Thesis: Identifying negative results using biomedical relation extraction systems.</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>BSc in Biology</h3>
+                        <p class="sub-header">Instituto Superior de Agronomia, Portugal | 2017 - 2020 | Final Grade: 15.22</p>
+                        <ul>
+                           <li>Thesis: Determination of DNA-RNA differences along leaf development of Vitis vinifera sylvestris.</li>
+                           <li class="publication"><a href="https://www.biorxiv.org/content/10.1101/2020.10.10.334182v1" target="_blank">Publication: RNA Editing in Wild Grapevine – bioRxiv</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="skills-awards" class="content-section scroll-reveal">
+                <div class="grid-layout">
+                    <div class="skills-section">
+                        <h2><i class="fas fa-cogs"></i> Technical Skills</h2>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span><span class="skill-tag">R</span><span class="skill-tag">Shell</span>
+                            <span class="skill-tag">Samtools</span><span class="skill-tag">Bcftools</span><span class="skill-tag">GATK</span>
+                            <span class="skill-tag">SpliceAI</span><span class="skill-tag">Docker</span><span class="skill-tag">SLURM</span>
+                            <span class="skill-tag">Machine Learning</span><span class="skill-tag">Deep Learning</span>
+                            <span class="skill-tag">Text Mining</span><span class="skill-tag">NLP</span>
+                            <span class="skill-tag">DNA/RNA Extraction</span><span class="skill-tag">PCR</span>
+                            <span class="skill-tag">Electrophoresis</span>
+                        </div>
+                    </div>
+                    
+                    <div class="awards-section">
+                        <h2><i class="fas fa-trophy"></i> Awards & Honors</h2>
+                         <div class="timeline-item" style="padding-left:0; margin-bottom:15px; border-left: none;">
+                            <h3 style="font-size:1.1rem">MaxData Excellence Award in Bioinformatics</h3>
+                            <p style="margin:0; font-size:1rem;">Best 1st year Master's Student (2023)</p>
+                        </div>
+                        <div class="timeline-item" style="padding-left:0; margin-bottom:15px; border-left: none;">
+                            <h3 style="font-size:1.1rem">Winner, Portuguese League of Bioinformatics</h3>
+                            <p style="margin:0; font-size:1rem;">Pupinada Team (2023)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+             <section id="leadership" class="content-section scroll-reveal">
+                <h2><i class="fas fa-flag"></i> Leadership, Conferences & Outreach</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>LEDUCQ Meeting Attendee</h3>
+                        <p class="sub-header">Boulder, CO (May 2025) & Arrábida, PT (Nov 2024)</p>
+                        <ul><li>Engaged in international cardiovascular research discussions, collaborative workshops, and networking.</li></ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>President, NUBISA (Biology Student Union)</h3>
+                        <p class="sub-header">Instituto Superior de Agronomia | 2019 - 2020</p>
+                        <ul>
+                            <li>Organized the annual "Jornadas da Biologia" conference for 60+ attendees and 15 speakers.</li>
+                            <li>Coordinated student trips, lectures, and peer-learning sessions.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="beyond-code" class="content-section scroll-reveal">
+                <h2><i class="fas fa-mountain-sun"></i> Beyond the Code</h2>
+                <div class="hobbies-grid">
+                    <div class="hobby-card">
+                        <i class="fas fa-users"></i>
+                        <h4>The Team Strategist</h4>
+                        <p>From competitive soccer and handball to social padel, I thrive in collaborative environments. Team sports have honed my strategic thinking, communication, and discipline under pressure.</p>
+                    </div>
+
+                    <div class="hobby-card">
+                        <i class="fas fa-pencil-ruler"></i>
+                        <h4>The Creative Mind</h4>
+                        <p>To balance a digital-first career, I invest in manual creation. Exploring ceramics and now learning to draw builds patience, hones my eye for detail, and fuels a different kind of problem-solving.</p>
+                    </div>
+
+                    <div class="hobby-card">
+                        <i class="fas fa-compass"></i>
+                        <h4>The Resilient Adventurer</h4>
+                        <p>True growth happens outside the comfort zone. Hitchhiking the length of Vietnam and across the Algarve taught me extreme adaptability, resourcefulness, and how to connect with people from all walks of life.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contacts" class="content-section scroll-reveal">
+                <h2><i class="fas fa-address-book"></i> Relevant Contacts</h2>
+                <div class="grid-layout">
+                    <div>
+                        <h3>MC Fonseca, Group Leader - GIMM</h3>
+                        <p><a href="mailto:carmo.fonseca@gimm.pt">carmo.fonseca@gimm.pt</a></p>
+                    </div>
+                    <div>
+                        <h3>Keilor Cordero, Marine Biologist - The Leatherback Trust</h3>
+                        <p><a href="mailto:kecordero95@gmail.com">kecordero95@gmail.com</a></p>
+                    </div>
+                    <div>
+                        <h3>André Barros, Data Scientist - GIMM</h3>
+                        <p><a href="mailto:andre.barros@gimm.pt">andre.barros@gimm.pt</a></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Particles.js CDN & Initialization -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false } },
+                "size": { "value": 3, "random": true, "anim": { "enable": false } },
+                "line_linked": { "enable": true, "distance": 150, "color": "#8892b0", "opacity": 0.4, "width": 1 },
+                "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+                "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } }, "push": { "particles_nb": 4 } }
+            },
+            "retina_detect": true
+        });
+        
+        // --- Scroll Reveal Animation ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.scroll-reveal').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // --- Active Sidebar Link on Scroll ---
+        const sections = document.querySelectorAll('.content-section');
+        const navLinks = document.querySelectorAll('.sidebar-nav a');
+        
+        window.addEventListener('scroll', () => {
+            let current = 'profile'; // Default to profile
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
