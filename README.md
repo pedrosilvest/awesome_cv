@@ -2,7 +2,7 @@
 
 <p align="center">
   <!-- 🚨 IMPORTANT: Update this link with your actual LinkedIn profile URL! -->
-  <a href="https://www.linkedin.com/in/your-linkedin-profile/" target="_blank">
+  <a href="https://www.linkedin.com/in/pedrosilvest/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge">
   </a>
    
