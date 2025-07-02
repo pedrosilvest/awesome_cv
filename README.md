@@ -21,7 +21,7 @@
 <p align="center">
   <!-- 🚨 IMPORTANT: Replace this placeholder with your own screen-capture GIF! -->
   <a href="https://pedrosilvest.github.io/awesome_cv/cv.html" target="_blank">
-    <img src="assets/demo.gif" alt="Animated Demo of the Interactive CV">
+    <img src="https://media1.tenor.com/m/L-o8k3lOEEYAAAAd/cyberpunk-reset.gif" alt="Animated Demo of the Interactive CV">
   </a>
 </p>
 
@@ -34,10 +34,3 @@
 </div>
 
 <br>
-
-### // Core Technologies
-
--   `//` **HTML5 & CSS3** (Custom Properties, Flexbox, Grid)
--   `//` **JavaScript (ES6+)** for animations and interactivity
--   `//` **Particles.js** for the dynamic background
--   `//` **Hosted on GitHub Pages**
