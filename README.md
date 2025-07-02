@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  This repository contains the system core for my interactive CV—a live data stream of my skills, experience, and pursuits.
+  This repository contains the system core for my interactive CV, a live data stream of my skills, experience, and pursuits.
 </p>
 
 ---
