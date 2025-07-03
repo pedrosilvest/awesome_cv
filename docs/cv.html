@@ -162,7 +162,9 @@
             background-color: var(--lightest-navy);
         }
         .timeline-item { position: relative; margin-bottom: 30px; }
-        .timeline-item::before {
+
+        /* ----- THIS IS THE CORRECTED, MORE SPECIFIC RULE ----- */
+        .timeline .timeline-item::before {
             content: '';
             position: absolute;
             left: -50px;
@@ -174,12 +176,12 @@
             border-radius: 50%;
             z-index: 1;
         }
+
         .timeline-item ul { list-style: none; }
         .timeline-item li { position: relative; padding-left: 20px; margin-bottom: 8px; color: var(--slate); }
         .timeline-item li::before { content: '▹'; position: absolute; left: 0; color: var(--accent-color); }
-        .timeline-item .publication a, #contacts a { color: var(--accent-color); text-decoration: none; transition: color 0.3s ease; }
-        .timeline-item a, #contacts a { color: var(--accent-color); text-decoration: none; transition: color 0.3s ease; }
-        .timeline-item .publication a:hover, #contacts a:hover { color: var(--white); }
+        .timeline-item a { color: var(--accent-color); text-decoration: none; transition: color 0.3s ease; }
+        .timeline-item a:hover { color: var(--white); }
 
 
         /* --- Right Column & Skills --- */
